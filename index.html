@@ -14,6 +14,7 @@
                 <h1>My Mine</h1>
                 <div class="menu-item">
                     <a href="https://www.instagram.com/nfa_sabi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+                    <button onclick="playMusic()">Play Music</button>
                 </div>
             </div>
         </div>
@@ -75,14 +76,23 @@
         <div class="footer">
             <p>Copyright © The MyGF Project 2026</p>
         </div>
-        <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/TRACK_ID" 
-        width="300" height="80" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        <iframe id="music"
+            src=""
+            width="0"
+            height="0"
+            frameborder="0"
+            allow="autoplay"
+            style="display:none;">
         </iframe>
+        
+        <script>
+        function playMusic() {
+            document.getElementById("music").src =
+            "https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID";
+        }
+        </script>
     </body>
 
 </html>
+
 
