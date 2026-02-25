@@ -10,6 +10,9 @@
 
     <body>
         <div class="menubar">
+             <center>
+                <iframe data-testid="embed-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/track/3hEfpBHxgieRLz4t3kLNEg?utm_source=generator" width="60%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </center>
             <div class="child-menubar">
                 <h1>My Mine</h1>
                 <div class="menu-item">
@@ -76,43 +79,10 @@
         <div class="footer">
             <p>Copyright © The MyGF Project 2026</p>
         </div>
-        <iframe id="music"
-            src=""
-            width="0"
-            height="0"
-            frameborder="0"
-            allow="autoplay"
-            style="display:none;">
-        </iframe>
-        
-        <audio id="bg-music" loop>
-            <source src="music/stay.mp3" type="audio/mpeg">
-        </audio>
-
-        <script>
-        function startMusic() {
-            const music = document.getElementById("bg-music");
-            music.volume = 0;
-            music.play();
-
-            let fade = setInterval(() => {
-                if (music.volume < 0.2) {
-                    music.volume += 0.01;
-                } else {
-                    clearInterval(fade);
-                }
-            }, 30);
-
-            document.removeEventListener("click", startMusic);
-            document.removeEventListener("touchstart", startMusic);
-        }
-
-        document.addEventListener("click", startMusic);
-        document.addEventListener("touchstart", startMusic);
-        </script>
     </body>
 
 </html>
+
 
 
 
