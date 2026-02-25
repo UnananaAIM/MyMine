@@ -47,16 +47,6 @@ body {
     color: #ffffff;
 }
 
-.menu-item button {
-    text-decoration: none;
-    color: #e5e7eb;
-    transition: 0.3s;
-}
-
-.menu-item button:hover {
-    color: #ffffff;
-}
-
 /* ================= BANNER ================= */
 .banner {
     background-color: #1f2937;
@@ -232,4 +222,5 @@ body {
     }
 
 }
+
 
