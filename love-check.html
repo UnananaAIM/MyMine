@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nafa's Dashboard</title>
+        <link rel="stylesheet" href="love.css">
+    </head>
+    <body>
+
+        <div class="love-box">
+            <h1>Pertanyaan Buat Nafa</h1>
+
+            <div class="question">
+                Kamu sayang aku nggak?
+            </div>
+
+            <div class="buttons">
+                <button class="yes-btn" onclick="window.location.href='yes.html'">
+                    Yes
+                </button>
+
+                <button class="no-btn" id="noButton">
+                    No
+                </button>
+            </div>
+        </div>
+
+        <script>
+        const noBtn = document.getElementById("noButton");
+        let activated = false;
+
+        noBtn.addEventListener("click", function () {
+
+            if (!activated) {
+                noBtn.style.position = "fixed";
+                activated = true;
+            }
+
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        });
+        </script>
+
+    </body>
+</html>
